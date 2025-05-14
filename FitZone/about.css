@@ -1,0 +1,150 @@
+/* ========== BASE STYLES ========== */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 2rem 1rem;
+}
+
+/* ========== NAVIGATION ========== */
+.topnav {
+  width: 100%;
+  background-color: #222;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 1rem;
+  position: relative;
+  z-index: 10;
+}
+
+.topnav a {
+  color: white;
+  text-align: center;
+  padding: 10px 16px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.topnav a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+}
+
+.topnav .icon {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+  position: absolute;
+  right: 20px;
+  top: 15px;
+}
+
+@media screen and (max-width: 768px) {
+  .topnav a:not(:first-child):not(.icon) {
+    display: none;
+  }
+
+  .topnav a.icon {
+    display: block;
+  }
+
+  .topnav.responsive {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .topnav.responsive a {
+    display: block;
+    width: 100%;
+    text-align: left;
+    padding: 1rem;
+  }
+}
+
+/* ========== HERO SECTION ========== */
+.hero {
+  background: url('gymnav.jpg') no-repeat center center/cover;
+  width: 100%;
+  height: 450px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4); /* DARK OVERLAY */
+  z-index: 1;
+}
+
+.hero-text {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-text h1,
+.hero-text p {
+  margin: 0.5rem;
+  padding: 0.5rem 1rem;
+  background-color: rgba(0, 0, 0, 0.4); /* Matches overlay */
+  border-radius: 5px;
+}
+
+/* ========== SLIDESHOW ========== */
+.slideshow {
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0;
+}
+
+.slideshow img {
+  max-width: 90%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* ========== ABOUT SECTION ========== */
+.about-section {
+  padding: 2rem;
+  background-color: #fff;
+  text-align: center;
+}
+
+/* ========== MAP SECTION ========== */
+.map-section {
+  padding: 2rem;
+  background-color: #e9ecef;
+  text-align: center;
+}
+
+.map-section iframe {
+  width: 100%;
+  height: 300px;
+  border: none;
+  border-radius: 5px;
+}
+
+/* ========== FOOTER ========== */
+footer {
+  text-align: center;
+  background-color: #222;
+  color: white;
+  padding: 1rem;
+}
